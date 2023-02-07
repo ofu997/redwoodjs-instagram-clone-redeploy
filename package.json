@@ -14,7 +14,7 @@
     "root": true
   },
   "engines": {
-    "node": ">=14",
+    "node": ">=14 <17.0.0",
     "yarn": ">=1.15"
   },
   "dependencies": {
@@ -22,5 +22,8 @@
     "express": "^4.17.1",
     "firebase": "^8.2.3",
     "multer": "^1.4.2"
+  },
+  "scripts": {
+    "start": "NODE_OPTIONS=--openssl-legacy-provider"
   }
 }
