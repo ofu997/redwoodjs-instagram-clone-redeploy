@@ -5,13 +5,12 @@ import { MetaTags } from '@redwoodjs/web'
 
 const User = ({ infoAndImages }) => {
   const { userImages } = infoAndImages;
-  const imagesToReverse = [...userImages]
-  const reversedImages = imagesToReverse.reverse();
+  const sortedImages = [...userImages].sort((a,b) => b.id - a.id);
   return (
     <>
       <UserInfo user={infoAndImages} />
       <Images
-        images={reversedImages}
+        images={sortedImages}
       />
     </>
   )
